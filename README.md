@@ -1,6 +1,7 @@
 # ZAP Data Challenge
 # *IMPORTANTE*
-### *Ainda não terminei a challenge, estou +- 1/3 de terminar, comecei no sabado e não queria entregar um projeto mal feito*
+### *Ainda não terminei a challenge, estou +- 1/3 de terminar, comecei no sabado e não queria entregar um projeto mal feito, como trabalho de dia e estudo a noite não há tempo de evoluir dia da semana, peço que compreenda que a demora é por causa da falta de disponibilidade de tempo, se for possível entrego dia 05/08*
+*Execute o Zapchallenge.ipynb notebook, é nescessário os dois arquivos json no diretorio*
 
 ## O problema
 - Desafio
