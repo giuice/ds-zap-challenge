@@ -1,6 +1,10 @@
 # ZAP Data Challenge
 # *IMPORTANTE*
-### *Ainda não terminei a challenge, estou +- 1/3 de terminar, comecei no sabado e não queria entregar um projeto mal feito, como trabalho de dia e estudo a noite não há tempo de evoluir dia da semana, peço que compreenda que a demora é por causa da falta de disponibilidade de tempo, se for possível entrego dia 05/08*
+### *Projeto na fase final, falta as transformations que poderemos criar classes que herdam as interfaces fit-transform ou aplicar diretamente na fase de treinamento*
+#### Faltando: 
+- Rodar transformações
+- Pipeline Stacking com os algoritmos
+- Espero terminar hoje a noite(06-08-2019)
 *Execute o Zapchallenge.ipynb notebook, é nescessário os dois arquivos json no diretorio*
 
 ## O problema
