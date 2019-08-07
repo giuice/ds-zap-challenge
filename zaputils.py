@@ -19,6 +19,9 @@ from scipy.stats import norm
 import statsmodels.api as sm
 import statsmodels.formula.api as smf
 from IPython.core.display import display, HTML
+from scipy.stats import skew
+from scipy.special import boxcox1p
+from scipy.stats import boxcox_normmax
 
 
 # Funções de Exploração
@@ -474,6 +477,23 @@ def plotMetricsImportance(X, y):
     #feature_select.plot.barh()
     #feature_importances.plot.barh()
 
+def applyBoxCox(features):
+    numeric_dtypes = ['int16', 'int32', 'int64', 'float16', 'float32', 'float64']
+    numerics = []
+    for i in features.columns:
+        if features[i].dtype in numeric_dtypes:
+            numerics.append(i)
+    skew_features = features[numerics].apply(lambda x: skew(x)).sort_values(ascending=False)
+
+    high_skew = skew_features[skew_features > 0.5]
+    skew_index = high_skew.index
+    bc_alphas = {}
+    for i in skew_index:
+        alpha = boxcox_normmax(features[i]+1)
+        bc_alphas[i] = alpha
+        features[i] = boxcox1p(features[i], alpha)
+    return features, bc_alphas
+
 def featureImportanceLasso(X,y):
     reg = LassoCV()
     reg.fit(X, y)
@@ -504,3 +524,7 @@ def runGBMRegressor(X,y):
     plt.xlabel('Relative Importance')
     plt.title('Variable Importance')
     plt.show()
+
+def RMSLE(y, y_pred):
+    terms_to_sum = [(math.log(y_pred[i] + 1) - math.log(y[i] + 1)) ** 2.0 for i,pred in enumerate(y_pred)]
+    print("RMSLE: % 4f" % (sum(terms_to_sum) * (1.0/len(y))) ** 0.5)
