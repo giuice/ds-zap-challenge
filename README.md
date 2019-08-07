@@ -1,10 +1,10 @@
 # ZAP Data Challenge
 # *IMPORTANTE*
-### *Projeto na fase final, falta as transformations que poderemos criar classes que herdam as interfaces fit-transform ou aplicar diretamente na fase de treinamento*
+### *Projeto na fase final*
 #### Faltando: 
-- Rodar transformações
-- Pipeline Stacking com os algoritmos
-- Espero terminar hoje a noite(06-08-2019)
+- Analise da  previsão
+- Limpar imports 
+- Blended Stack Model
 *Execute o Zapchallenge.ipynb notebook, é nescessário os dois arquivos json no diretorio*
 
 ## O problema
@@ -52,3 +52,4 @@
 - Random Forest
 - XGBoost
 - LightGBM
+- Stacking Models
