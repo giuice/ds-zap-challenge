@@ -6,6 +6,7 @@
 - Limpar imports 
 - Blended Stack Model
 *Execute o Zapchallenge.ipynb notebook, é nescessário os dois arquivos json no diretorio*
+*Corrigido o erro ao aplicar os transforms no treino e validação, não passei de volta a variável*
 
 ## O problema
 - Desafio
